@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="icon" href="./public/logo.svg" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="./public/css/shared_style.css">
+        <link rel="stylesheet" type="text/css" href="./public/css/mvp_style.css">
+    </head>
+    <body>
+        <header>
+            <header-items>
+                <img src="./public/logo.svg" alt="logo">
+                <img id="hamburger-menu" src="./public/burger-menu-svgrepo-com.svg" alt="menu" width="50px">
+                <nav>
+                    <ul>
+                        <li><a href="./index.html#about">About</a></li>
+                        <li><a href="./index.html#projects">Portfolio</a></li>
+                        <li><a href="./index.html#contact">Contact</a></li>
+                        <li><a href="./public/resume.pdf" target="_blank">Resume</a></li>
+                    </ul>
+                </nav>
+            </header-items>
+        </header>
+        <main>
+            <section class="intro">
+                <h1>MVP Ideahub</h1>
+
+                <h2>A Glimpse Inside</h2>
+                <div>
+                    <div class="iframe-container">
+                        <iframe src="https://www.youtube.com/embed/NpEaa2P7qZI"></iframe>
+                    </div>
+                    <p>
+                        The MVP Ideation repository is not just an abstract concept; it's a fully functional
+                        web application. It's a digital canvas where budding entrepreneurs and visionaries
+                        can bring their ideas to life. To get started, let's explore the features and the
+                        technologies that power this platform.
+                    </p>
+                </div>
+            </section>
+
+            <section class="Features" id="UI-interface">
+                <h3>1. User-Friendly Interface</h3>
+                <p>
+                    The platform boasts an intuitive and user-friendly interface designed to make your
+                    experience seamless. Let's take a closer look at the different pages that make up the website:
+                </p>
+                <div id="UI-displays">
+                    <div>
+                        <h4>Homepage</h4>
+                        <picture>
+                            <source srcset="https://placehold.co/450x300" media="(min-width: 800px)">
+                            <source srcset="https://placehold.co/300x300" media="(max-width: 400px)">
+                            <img src="https://placehold.co/400x300" alt="placeholder">
+                        </picture>
+                    </div>
+                    <div>
+                        <h4>Sign up Page</h4>
+                        <picture>
+                            <source srcset="https://placehold.co/450x300" media="(min-width: 800px)">
+                            <source srcset="https://placehold.co/300x300" media="(max-width: 400px)">
+                            <img src="https://placehold.co/400x300" alt="placeholder">
+                        </picture>
+                    </div>
+                    <div>
+                        <h4>Login Page</h4>
+                        <picture>
+                            <source srcset="https://placehold.co/450x300" media="(min-width: 800px)">
+                            <source srcset="https://placehold.co/300x300" media="(max-width: 400px)">
+                            <img src="https://placehold.co/400x300" alt="placeholder">
+                        </picture>
+                    </div>
+                    <div>
+                        <h4>User's MVP page</h4>
+                        <picture>
+                            <source srcset="https://placehold.co/450x300" media="(min-width: 800px)">
+                            <source srcset="https://placehold.co/300x300" media="(max-width: 400px)">
+                            <img src="https://placehold.co/400x300" alt="placeholder">
+                        </picture>
+                    </div>
+                    <div>
+                        <h4>Leaderboard Page</h4>
+                        <picture>
+                            <source srcset="https://placehold.co/450x300" media="(min-width: 800px)">
+                            <source srcset="https://placehold.co/300x300" media="(max-width: 400px)">
+                            <img src="https://placehold.co/400x300" alt="placeholder">
+                        </picture>
+                    </div>
+                    <div>
+                        <h4>Profile Settings Page</h4>
+                        <picture>
+                            <source srcset="https://placehold.co/450x300" media="(min-width: 800px)">
+                            <source srcset="https://placehold.co/300x300" media="(max-width: 400px)">
+                            <img src="https://placehold.co/400x300" alt="placeholder">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+
+            <section class="Features" id="Security">
+                <h3>2. Authentication and Authorization</h3>
+                <p>
+                    Security is of the utmost importance when creating a platform like MVP Ideation.
+                    This application employs JSON Web Tokens (JWT) for authentication and authorization.
+                    When a user logs in, a JWT token is generated and returned to the client. To ensure
+                    secure interactions with the platform, this token must be included in the Authorization
+                    header of subsequent requests that require authentication.
+                </p>
+            </section>
+
+            <section class="Features" id="Storage">
+                <h3>3. MySQL Database</h3>
+                <p>
+                    All the data that drives the platform, including user information, is securely
+                    stored in a MySQL database. This ensures the reliability and persistence of the
+                    user data and MVP ideas.
+                </p>
+            </section>
+
+            <section class="Procedures">
+                <h2>How it Works</h2>
+                <div>
+                    <video controls src="https://placehold.co/450x300.mp4"></video>
+                    <ol>
+                        <li>
+                            <span>User Registration:</span><br/> Users can easily sign up by providing their basic information.
+                        </li>
+                        <li>
+                            <span>User Authentication:</span><br/> Once registered, users can log in securely, and a JWT token
+                            is generated for them.
+                        </li>
+                        <li>
+                            <span>Creating MVP Ideas:</span><br/> Users can share their innovative MVP ideas with the community.
+                            Each idea is unique and brings something special to the platform.
+                        </li>
+                        <li>
+                            <span>Exploring MVPs:</span><br/> Users can view MVP ideas created by others. The Leaderboard
+                            page helps users discover popular MVPs.
+                        </li>
+                        <li>
+                            <span>Profile Customization:</span><br/> Users can personalize their profiles, giving them a
+                            unique identity on the platform.
+                        </li>
+                </ol>
+                </div>
+
+            </section>
+
+            <section class="Conclusion">
+                <h2>The Community of Innovators</h2>
+                <p>
+                    The MVP Ideation platform is more than just a collection of MVP ideas;
+                    it's a vibrant community of innovators, dreamers, and creators. It's a place where
+                    like-minded individuals can connect, collaborate, and inspire each other to bring
+                    their ideas to life.
+                </p>
+            </section>
+        </main>
+    </body>
+</html>

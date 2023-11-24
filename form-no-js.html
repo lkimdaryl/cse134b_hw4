@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LK Portfolio</title>
+        <link rel="icon" href="./public/logo.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./public/css/main.css">
+        <link rel="stylesheet" type="text/css" href="./public/css/main_media.css">
+    </head>
+
+    <body>
+        <header>
+            <header-items>
+                <img src="./public/logo.svg" alt="logo">
+                <img id="hamburger-menu" src="./public/burger-menu-svgrepo-com.svg" alt="menu" width="50px">
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="./public/resume.pdf" target="_blank">Resume</a></li>
+                    </ul>
+                </nav>
+            </header-items>
+
+            <div class="querries">
+                <div>
+                    <label for="search-field">Search: </label>
+                    <input type="search" id="search-field" list="quick-nav">
+
+                    <datalist id="quick-nav">
+                        <option value="Projects">
+                        <option value="MVP">
+                        <option value="Restaurant Management">
+                        <option value="Secure Band">
+                        <option value="Skills">
+                        <option value="Programming">
+                        <option value="Database">
+                        <option value="Tools">
+                    </datalist>
+                </div>
+                <div>
+                    <label for="mode-select">Choose Mode: </label>
+                    <select id="mode-select">
+                        <optgroup label="Modes:"></optgroup>
+                        <option value="lightmode">Light Mode</option>
+                        <option value="darkmode">Dark Mode</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+        <div class="content-container">
+            <aside>
+                <div class="hero">
+                    <div id="my-name">
+                        <h3>Hi!</h3>
+                        <h2>I'm <span>Kim</span>.</h2>
+                    </div>
+
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="./public/imgs/profile_pic_200.JPG">
+                        <source media="(min-width: 601px)" srcset="./public/imgs/profile_pic_300.JPG">
+                        <img id="my-img" src="./public/imgs/profile_pic_300.JPG" alt="Kim's profile picture">
+                    </picture>
+
+                    <div>
+                        <h2 id="title">Creative <br/>Developer</h2>
+                        <p><strong>
+                            I build accessible, inclusive products and digital experiences for the web.
+                        </strong></p>
+                    </div>
+                </div>
+            </aside>
+            <div id="glow"></div>
+            <main>
+                <section class="about-me" id="about">
+                    <h2 class="section-title">About me</h2>
+                    <p id="about-me-content">
+                        Hello there! <span>I'm Kim</span>, and I have a <span>passion</span> for crafting
+                        <span>digital products</span> on the web. My interest in computers began by the allure of
+                        <span>video games</span>. The mesmerizing <span>graphics</span> in these games inspired me,
+                        and propelled me to embark on a path of <span>innovation</span> and <span>creativity</span>.
+                        <br/><br/>
+                        Fast forward to today, I've had the privilege of collaborating with <span>talented</span>
+                        student-led teams at the <span>University of California San Diego</span>. It's within these
+                        <span>collaborative</span> spaces that I've delved into the very technologies that powers the
+                        web, such as <span>HTML</span> and <span>CSS</span>. My primary focus now revolves around
+                        creating <span>accessible and inclusive digital products</span> that
+                        makes the <span>experience of using the web seamless and pleasant</span>.
+                    </p>
+                </section>
+                <hr/>
+                <section class="skills-section">
+                    <table width="100%">
+                        <caption><h2 class="section-title">Skills</h2></caption>
+                        <tbody class="table-body">
+                            <tr>
+                                <th class="category">Programming</th>
+                                <td class="skill">
+                                    <p class="skill-name">Java</p>
+                                </td>
+                                <td class="skill">
+                                    <p class="skill-name">JavaScript</p>
+                                </td>
+                                <td class="skill">
+                                    <p class="skill-name">Python</p>
+                                </td>
+                            </tr>
+                            <tr class="skill-row">
+                                <th class="category">Web Technologies</th>
+                                <td class="skill">
+                                    <p class="skill-name">HTML</p>
+                                </td>
+                                <td class="skill">
+                                    <p class="skill-name">CSS</p>
+                                </td>
+                                <td class="skill">
+                                    <p class="skill-name">FastAPI</p>
+                                </td>
+                            </tr>
+                            <tr class="skill-row">
+                                <th class="category">Database</th>
+                                <td class="skill">
+                                    <p class="skill-name">MySQL</p>
+                                </td>
+                            </tr>
+                            <tr class="skill-row">
+                                <th class="category">Tools</th>
+                                <td class="skill">
+                                    <p class="skill-name">Eclipse</p>
+                                </td>
+                                <td class="skill">
+                                    <p class="skill-name">Github</p>
+                                </td>
+                                <td class="skill">
+                                    <p class="skill-name">VSCode</p>
+                                </td>
+                                <td class="skill">
+                                    <p class="skill-name">PyCharm</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <hr/>
+                <section class="project-section" id="projects">
+                    <h2 class="section-title"> Selected Work</h2>
+                    <div class="project">
+                        <h3 class="project-name">Restaurant Management System</h3>
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="./public/imgs/RMS_display.png">
+                            <source media="(min-width: 601px)" srcset="./public/imgs/RMS_display_800.png">
+                            <img src="./public/imgs/RMS_display.png" alt="display image for Restaurant Management System">
+                        </picture>
+                        <div class="project-details">
+                            <p>
+                                A web app that <span>streamlines order</span> and <span>processing</span>
+                                operations by <span>facilitating menu items</span> and <span>orders</span>.
+                                <br/><br/>
+                                Built using <span>HTML</span> and <span>CSS</span> to make a
+                                <span>friendly user interface</span> and utilizes the <span>fastAPI framework</span>
+                                and <span>MySQL</span> to leverage <span>RESTful APIs</span> and manage menu items
+                                and orders efficiently.
+                            </p>
+                            <a class="source-link" id="RMS" href="https://github.com/lkimdaryl/Restaurant_Management_System" target="_blank">Github</a>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h3 class="project-name">MVP Ideahub</h3>
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="./public/imgs/MVP_display.png">
+                            <source media="(min-width: 601px)" srcset="./public/imgs/MVP_display_800.png">
+                            <img src="./public/imgs/MVP_display.png" alt="placeholder">
+                        </picture>
+                        <div class="project-details">
+                            <p>
+                                Provides a space for users to explore and share their <span>MVP</span>
+                                (Minimum Viable Product) ideas.
+                                <br/><br/>
+                                Offers essential <span>social networking features</span>, including user <span>registration, login,
+                                profile viewing, leaderboards,</span> and <span>MVP updates</span>.
+                                <br/><br/>
+                                Utilizes <span>JWT token</span> to <span>authenticate</span> and <span>authorize</span>
+                                users for <span>security</span>.</p>
+                            <a class="source-link" id="MVP-github" href="https://github.com/lkimdaryl/MVPIdeation" target="_blank">Github</a>
+                            <a class="source-link" id="MVP-page" href="./MVP.html">Learn More</a>
+                        </div>
+                    </div>
+                </section>
+                <hr/>
+                <section class="contact-section">
+                    <div id="contact">
+                        <h2 class="section-title">Get in Touch</h2>
+                        <ol>
+                            <li>Phone: <span>(619) 636 - 9526</span> </li>
+                            <li>Email: <span>lkimdaryl@gmail.com</span> </li>
+                        </ol>
+                        <form id="messageForm" action="https://httpbin.org/post" method="POST">
+                            <fieldset>
+                                <legend>Send a message</legend>
+                                <div class="input-row">
+                                    <label for="name">Name: &nbsp</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="input-row">
+                                    <label for="email">Email: &nbsp</label>
+                                    <input type="text" id="email" name="email" placeholder="Enter your email"
+                                           pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
+                                </div>
+                                <div class="input-row">
+                                    <label for="comments">Message:</label>
+                                </div>
+                                <div class="input-row">
+                                    <div id="notification"></div>
+                                    <textarea id="comments" name="message" rows="4" cols="50"
+                                              placeholder="Enter your message here"
+                                              minlength="3" maxlength="500"
+                                              required></textarea>
+                                </div>
+                                <button type="submit" id="send-bttn">Send</button>
+                            </fieldset>
+                        </form>
+                        <output id="errorOutput" aria-live="assertive" role="alert"></output>
+                        <output id="infoOutput" aria-live="polite"></output>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer>
+          <p>&copy; 2023 My Portfolio</p>
+        </footer>
+
+
+    </body>
+</html>
