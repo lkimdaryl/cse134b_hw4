@@ -56,7 +56,7 @@
                 <div class="hero">
                     <div id="my-name">
                         <h3>Hi!</h3>
-                        <h2>I'm <span>Kim</span>.</h2>
+                        <h2>I'm <strong>Kim</strong>.</h2>
                     </div>
 
                     <picture>
@@ -73,22 +73,22 @@
                     </div>
                 </div>
             </aside>
-            <div id="glow"></div>
+<!--            <div id="glow"></div>-->
             <main>
                 <section class="about-me" id="about">
                     <h2 class="section-title">About me</h2>
                     <p id="about-me-content">
-                        Hello there! <span>I'm Kim</span>, and I have a <span>passion</span> for crafting
-                        <span>digital products</span> on the web. My interest in computers began by the allure of
-                        <span>video games</span>. The mesmerizing <span>graphics</span> in these games inspired me,
-                        and propelled me to embark on a path of <span>innovation</span> and <span>creativity</span>.
+                        Hello there! <strong>I'm Kim</strong>, and I have a <strong>passion</strong> for crafting
+                        <strong>digital products</strong> on the web. My interest in computers began by the allure of
+                        <strong>video games</strong>. The mesmerizing <strong>graphics</strong> in these games inspired me,
+                        and propelled me to embark on a path of <strong>innovation</strong> and <strong>creativity</strong>.
                         <br/><br/>
-                        Fast forward to today, I've had the privilege of collaborating with <span>talented</span>
-                        student-led teams at the <span>University of California San Diego</span>. It's within these
-                        <span>collaborative</span> spaces that I've delved into the very technologies that powers the
-                        web, such as <span>HTML</span> and <span>CSS</span>. My primary focus now revolves around
-                        creating <span>accessible and inclusive digital products</span> that
-                        makes the <span>experience of using the web seamless and pleasant</span>.
+                        Fast forward to today, I've had the privilege of collaborating with <strong>talented</strong>
+                        student-led teams at the <strong>University of California San Diego</strong>. It's within these
+                        <strong>collaborative</strong> spaces that I've delved into the very technologies that powers the
+                        web, such as <strong>HTML</strong> and <strong>CSS</strong>. My primary focus now revolves around
+                        creating <strong>accessible and inclusive digital products</strong> that
+                        makes the <strong>experience of using the web seamless and pleasant</strong>.
                     </p>
                 </section>
                 <hr/>
@@ -157,12 +157,12 @@
                         </picture>
                         <div class="project-details">
                             <p>
-                                A web app that <span>streamlines order</span> and <span>processing</span>
-                                operations by <span>facilitating menu items</span> and <span>orders</span>.
+                                A web app that <strong>streamlines order</strong> and <strong>processing</strong>
+                                operations by <strong>facilitating menu items</strong> and <strong>orders</strong>.
                                 <br/><br/>
-                                Built using <span>HTML</span> and <span>CSS</span> to make a
-                                <span>friendly user interface</span> and utilizes the <span>fastAPI framework</span>
-                                and <span>MySQL</span> to leverage <span>RESTful APIs</span> and manage menu items
+                                Built using <strong>HTML</strong> and <strong>CSS</strong> to make a
+                                <strong>friendly user interface</strong> and utilizes the <strong>fastAPI framework</strong>
+                                and <strong>MySQL</strong> to leverage <strong>RESTful APIs</strong> and manage menu items
                                 and orders efficiently.
                             </p>
                             <a class="source-link" id="RMS" href="https://github.com/lkimdaryl/Restaurant_Management_System" target="_blank">Github</a>
@@ -178,14 +178,14 @@
                         </picture>
                         <div class="project-details">
                             <p>
-                                Provides a space for users to explore and share their <span>MVP</span>
+                                Provides a space for users to explore and share their <strong>MVP</strong>
                                 (Minimum Viable Product) ideas.
                                 <br/><br/>
-                                Offers essential <span>social networking features</span>, including user <span>registration, login,
-                                profile viewing, leaderboards,</span> and <span>MVP updates</span>.
+                                Offers essential <strong>social networking features</strong>, including user <strong>registration, login,
+                                profile viewing, leaderboards,</strong> and <strong>MVP updates</strong>.
                                 <br/><br/>
-                                Utilizes <span>JWT token</span> to <span>authenticate</span> and <span>authorize</span>
-                                users for <span>security</span>.</p>
+                                Utilizes <strong>JWT token</strong> to <strong>authenticate</strong> and <strong>authorize</strong>
+                                users for <strong>security</strong>.</p>
                             <a class="source-link" id="MVP-github" href="https://github.com/lkimdaryl/MVPIdeation" target="_blank">Github</a>
                             <a class="source-link" id="MVP-page" href="./MVP.html">Learn More</a>
                         </div>
@@ -196,8 +196,8 @@
                     <div id="contact">
                         <h2 class="section-title">Get in Touch</h2>
                         <ol>
-                            <li>Phone: <span>(619) 636 - 9526</span> </li>
-                            <li>Email: <span>lkimdaryl@gmail.com</span> </li>
+                            <li>Phone: <strong>(619) 636 - 9526</strong> </li>
+                            <li>Email: <strong>lkimdaryl@gmail.com</strong> </li>
                         </ol>
                         <form id="messageForm" action="https://httpbin.org/post" method="POST">
                             <fieldset>
@@ -205,11 +205,13 @@
                                 <div class="input-row">
                                     <label for="name">Name: &nbsp</label>
                                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                    <output class="errorOutput" aria-live="assertive" role="alert"></output>
                                 </div>
                                 <div class="input-row">
                                     <label for="email">Email: &nbsp</label>
-                                    <input type="text" id="email" name="email" placeholder="Enter your email"
+                                    <input type="email" id="email" name="email" placeholder="Enter your email"
                                            pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
+                                    <output class="errorOutput" aria-live="assertive" role="alert"></output>
                                 </div>
                                 <div class="input-row">
                                     <label for="comments">Message:</label>
@@ -221,11 +223,12 @@
                                               minlength="3" maxlength="500"
                                               required></textarea>
                                 </div>
+                                <output class="infoOutput" aria-live="polite"></output>
+                                <output class="errorOutput" aria-live="assertive" role="alert"></output>
                                 <button type="submit" id="send-bttn">Send</button>
                             </fieldset>
                         </form>
-                        <output id="errorOutput" aria-live="assertive" role="alert"></output>
-                        <output id="infoOutput" aria-live="polite"></output>
+
                     </div>
                 </section>
             </main>

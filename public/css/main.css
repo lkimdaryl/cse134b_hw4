@@ -54,7 +54,7 @@ main {
     color: var(--main-color);
 }
 
-#my-name span {
+#my-name strong {
     font-size: 1.5em;
     color: orange;
 }
@@ -63,8 +63,12 @@ main {
     color: var(--heading-color);
 }
 
-span {
+strong {
     color: var(--emphasis-color);
+}
+
+.hero div p strong {
+    color: var(--main-color);
 }
 
 section {
@@ -166,17 +170,16 @@ legend {
 
 .input-row {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     margin: 10px 0;
 }
 
 .label {
-    flex: 1;
     max-width: 50%;
 }
 
 .input-field {
-    flex: 2;
     max-width: 100%;
 }
 
@@ -211,8 +214,8 @@ footer {
 
 #glow {
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 50%;
+    height: 50%;
     border-radius: 50%;
     background: radial-gradient(circle, var(--background-color), blue 100%);
     filter: blur(200px);
@@ -221,16 +224,22 @@ footer {
     display: none;
     transform: translate(-50%, -50%);
 }
-
-input:valid {
-    outline: 2px solid green;
-}
-
-textarea:valid {
-    outline: 2px solid green;
-}
-
+/*
 input:user-invalid {
-    outline: 2px solid red;
+    background: #FFCCCC;
 }
+*/
+
+output {
+    display: none;
+    color: red;
+    background: white;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+}
+
+.invalid {
+    background: #FFCCCC;
+}
+
 
