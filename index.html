@@ -205,30 +205,27 @@
                                 <div class="input-row">
                                     <label for="name">Name: &nbsp</label>
                                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                                    <output class="errorOutput" aria-live="assertive" role="alert"></output>
+                                    <output class="errorOutput" id="nameOutput" aria-live="assertive" role="alert"></output>
                                 </div>
                                 <div class="input-row">
                                     <label for="email">Email: &nbsp</label>
-                                    <input type="email" id="email" name="email" placeholder="Enter your email"
-                                           pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
-                                    <output class="errorOutput" aria-live="assertive" role="alert"></output>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    <output class="errorOutput" id="emailOutput" aria-live="assertive" role="alert"></output>
+                                </div>
+                                <div class="input-row">
+
                                 </div>
                                 <div class="input-row">
                                     <label for="comments">Message:</label>
-                                </div>
-                                <div class="input-row">
-                                    <div id="notification"></div>
                                     <textarea id="comments" name="message" rows="4" cols="50"
                                               placeholder="Enter your message here"
-                                              minlength="3" maxlength="500"
-                                              required></textarea>
+                                              maxlength="500" required></textarea>
+                                    <output id="char-info" aria-live="polite"></output>
                                 </div>
-                                <output class="infoOutput" aria-live="polite"></output>
-                                <output class="errorOutput" aria-live="assertive" role="alert"></output>
+                                <output id="notification" aria-live="assertive" role="alert">Message Sent</output>
                                 <button type="submit" id="send-bttn">Send</button>
                             </fieldset>
                         </form>
-
                     </div>
                 </section>
             </main>

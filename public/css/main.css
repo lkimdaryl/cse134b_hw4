@@ -175,6 +175,10 @@ legend {
     margin: 10px 0;
 }
 
+.input-row:last-child {
+    margin: 0;
+}
+
 .label {
     max-width: 50%;
 }
@@ -210,6 +214,7 @@ button:hover {
 
 footer {
     text-align: center;
+    margin-top: 100px;
 }
 
 #glow {
@@ -230,12 +235,25 @@ input:user-invalid {
 }
 */
 
-output {
+.errorOutput {
     display: none;
     color: red;
     background: white;
     border-radius: 0 0 5px 5px;
     text-align: center;
+    transition: calc(current width minus 2px);
+}
+
+#notification {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: none;
 }
 
 .invalid {
