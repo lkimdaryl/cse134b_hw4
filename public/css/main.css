@@ -6,6 +6,13 @@
     }
 */
 
+#mode-container {
+    margin-top: 10px;
+}
+input[type="radio"] {
+    transform: scale(1.5);
+}
+
 .content-container {
     display: flex;
     justify-content: space-between;
@@ -20,7 +27,7 @@ aside {
     position: sticky;
     top: 0;
     padding-top: 50px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 main {
@@ -51,7 +58,7 @@ main {
 }
 
 #my-name {
-    color: var(--main-color);
+    color: var(--main-text-color);
 }
 
 #my-name strong {
@@ -68,7 +75,7 @@ strong {
 }
 
 .hero div p strong {
-    color: var(--main-color);
+    color: var(--main-text-color);
 }
 
 section {
@@ -105,7 +112,7 @@ section {
 .source-link {
     background: var(--button-color);
     padding: 5px 20px;
-    color: var(--emphasis-color);
+    color: var(--button-text-color);
     text-decoration: none;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -113,8 +120,8 @@ section {
 
 .source-link:hover {
     transform: translate(0 15px);
-    background: var(--emphasis-color);
-    color: black;
+    background: var(--button-text-color);
+    color: var(--button-color);
 }
 
 tbody {
@@ -199,7 +206,7 @@ button {
     width: 100%;
     background: var(--button-color);
     border: none;
-    color: var(--emphasis-color);
+    color: var(--button-text-color);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -207,8 +214,8 @@ button {
 
 button:hover {
     transform: translate(0 15px);
-    background: var(--emphasis-color);
-    color: black;
+    background: var(--button-text-color);
+    color: var(--button-color);
     cursor: pointer;
 }
 
@@ -217,18 +224,6 @@ footer {
     margin-top: 100px;
 }
 
-#glow {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    border-radius: 50%;
-    background: radial-gradient(circle, var(--background-color), blue 100%);
-    filter: blur(200px);
-    opacity: 20%;
-    pointer-events: none;
-    display: none;
-    transform: translate(-50%, -50%);
-}
 /*
 input:user-invalid {
     background: #FFCCCC;

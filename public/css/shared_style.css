@@ -1,10 +1,21 @@
 :root {
     --background-color: #212A3E;
-    --main-color: #9BA4B5;
+    --main-text-color: #9BA4B5;
     --emphasis-color: #F1F6F9;
     --button-color: #394867;
+    --button-text-color: #F1F6F9;
     --heading-color: #fec160;
 }
+
+.lightmode {
+    --background-color: #DDF2FD;
+    --main-text-color: #427D9D;
+    --emphasis-color: #164863;
+    --button-color: #427D9D;
+    --button-text-color: #9BBEC8;
+    --heading-color: #fec160; /*dont change*/
+}
+
 
 body {
     font-size: 1rem;
@@ -16,7 +27,7 @@ body {
     height: 100%;
     background-color: var(--background-color);
     font-family: Arial, sans-serif;
-    color: var(--main-color);
+    color: var(--main-text-color);
 }
 
 header-items {
@@ -45,7 +56,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: var(--main-color);
+    color: var(--main-text-color);
     font-size: 1.2em;
 }
 
@@ -62,4 +73,8 @@ nav a:hover {
     header nav {
         display: none;
     }
+}
+
+h1, h2, h3, h4 {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }

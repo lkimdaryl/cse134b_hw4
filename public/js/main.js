@@ -1,6 +1,42 @@
 document.addEventListener('DOMContentLoaded', function () {
-//    mouseGlow();
+    let darkSelector = document.querySelector("#dark-selector");
+    let lightSelector = document.querySelector("#light-selector");
 
+    let lightmode = localStorage.getItem("lightmode");
+
+    const enableLightMode = () => {
+        document.body.classList.add("lightmode");
+        localStorage.setItem("lightmode", "enabled");
+    };
+
+    const disableLightMode = () => {
+        document.body.classList.remove("lightmode");
+        localStorage.setItem("lightmode", null);
+    };
+
+    if (lightmode === "enabled"){
+        enableLightMode();
+        lightSelector.checked = true;
+        darkSelector.checked = false;
+    }
+
+    darkSelector.addEventListener("click", (event) => {
+        lightSelector.checked = false;
+        lightmode = localStorage.getItem("lightmode");
+        if (lightmode === "enabled"){
+            disableLightMode();
+        }
+    });
+
+    lightSelector.addEventListener("click", (event) => {
+        darkSelector.checked = false;
+        lightmode = localStorage.getItem("lightmode");
+        if (lightmode !== "enabled"){
+            enableLightMode();
+        }
+    });
+
+//---------------------------------------------------------------
     const form = document.querySelector("#messageForm");
     const name = document.querySelector("#name");
     const email = document.querySelector("#email");
@@ -154,7 +190,8 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .catch(error => console.error(error));
         }
-                if (name.checkValidity() && email.checkValidity() && message.checkValidity()){
+
+        if (name.checkValidity() && email.checkValidity() && message.checkValidity()){
             name.value = "";
             email.value = "";
             message.value = "";
@@ -175,18 +212,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-function mouseGlow(){
-    const glow = document.getElementById('glow');
-
-    document.addEventListener('mousemove', (e) => {
-        const x = e.pageX;
-        const y = e.pageY;
-
-        glow.style.left = `${x}px`;
-        glow.style.top = `${y}px`;
-
-        glow.style.display = 'block';
-    });
-};
 

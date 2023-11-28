@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./public/css/main.css">
         <link rel="stylesheet" type="text/css" href="./public/css/main_media.css">
         <script src="./public/js/main.js" defer></script>
+
     </head>
 
     <body>
@@ -41,13 +42,9 @@
                         <option value="Tools">
                     </datalist>
                 </div>
-                <div>
-                    <label for="mode-select">Choose Mode: </label>
-                    <select id="mode-select">
-                        <optgroup label="Modes:"></optgroup>
-                        <option value="lightmode">Light Mode</option>
-                        <option value="darkmode">Dark Mode</option>
-                    </select>
+                <div id="mode-container">
+                    <input type="radio" id="dark-selector" checked> <span>Dark Mode</span>
+                    <input type="radio" id="light-selector"> <span>Light Mode</span>
                 </div>
             </div>
         </header>
